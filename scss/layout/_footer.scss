@@ -1,0 +1,61 @@
+@use "../base/b-index" as i;
+
+.l_footer {
+    width: 100%;
+    height: 100px;
+
+    @include i.mb {
+        height: 60px
+    }
+
+    .l_footer_inner {
+        @include i.center;
+        justify-content: space-between;
+        height: 100%;
+        overflow: hidden;
+        
+
+        .l_footer_img-box {
+            width: 20%;
+            height: 100%;
+
+            .l_footer_img {
+                height: 100%;
+            }
+        }
+
+        .l_footer_Japan {
+            height: 100%;
+            @include i.center;
+            position: relative;
+
+            @include i.mb {
+                transform: scale(0.6);
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 50vw;
+                max-width: 160px;
+                height: 50vw;
+                max-height: 160px;
+                background: i.$red;
+                border-radius: 25vw;
+            }
+
+            .l_footer_copywrite {
+                color: i.$white;
+                z-index: 100;
+                font-size: i.$text-min-size;
+            }
+        }
+
+        .l_footer_img-box__right {
+            transform: rotateY(180deg);
+        }
+    }
+}

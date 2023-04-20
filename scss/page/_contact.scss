@@ -1,0 +1,40 @@
+@use "../base/b-index" as i;
+
+.contact_block {
+    .contact_message {
+        margin-top: 40px;
+        font-size: i.$text-max-size;
+        font-weight: bold;
+        line-height: 3;
+
+        @include i.mb {
+            font-size: i.$text-sub-size;
+        }
+    }
+
+    .contact_form-box {
+
+
+        .contact_form_group {
+            display: flex;
+            flex-direction: column;
+            margin-top: 24px;
+            .contact_label {
+
+            }
+            .contact_input {
+                border: 1px solid #000;
+                border-radius: 20px;
+                padding: 8px;
+                width: 100%;
+            }
+        }
+
+        .contact_button {
+            display: block;
+            color: i.$blue;
+            font-weight: bold;
+            margin: 24px auto;
+        }
+    }
+}

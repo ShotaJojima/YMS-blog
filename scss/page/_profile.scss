@@ -1,0 +1,111 @@
+@use "../base/b-index" as i;
+
+.profile_title {
+        text-align: left;
+        font-weight: bold;
+        font-size: i.$title-middle-size;
+        margin: 36px 0;
+    }
+
+.profile_block {
+    text-align: center;
+
+    .profile_about-me {
+        width: 90%;
+
+        @include i.tab {
+            width: 100%;
+        }
+        
+        .profile_img-box {
+            margin: 36px 0;
+
+            .profile_img {
+                border-radius: 30px;
+            }
+        }
+
+        .profile_text {
+            .profile_name {
+                font-size: i.$title-middle-size;
+                font-weight: bold;
+            }
+
+            .profile_overview {
+                font-size: i.$text-middle-size;
+                font-weight: bold;
+                margin: 16px 0;
+            }
+
+            .profile_message-box {
+                .profile_message {
+                    margin: 5vh 0;
+                    font-size: i.$text-sub-size;
+                    line-height: 3;
+                    text-shadow: 0px 4px 4px gray;
+                }
+                
+            }
+        }
+
+    }
+
+    .profile_history {
+        width: 90%;
+
+        @include i.tab {
+            width: 100%;
+        }
+
+        .profile_history-box {
+            width: 100%;
+            overflow: scroll;
+            border: 2px solid #000;
+            border-radius: 5px;
+
+            .profile_table {
+                border-radius: 30px;
+                font-size: i.$text-min-size;
+                font-weight: bold;
+                
+
+                .profile_table-row {
+                    
+                    .profile_table-data {
+                        padding: 8px;
+                        border: 1px solid #000;
+                        writing-mode: vertical-rl;
+                        text-orientation: upright;
+                    }
+
+                    .profile_topic-data {
+
+                    }
+
+                }
+
+                .profile_date-row {
+                    background-color: i.$light-blue;
+
+                    .profile_date-data {
+                        line-height: 1.5;
+                    }
+                }
+
+                .profile_topic-row {
+                    .profile_topic-data {
+                        padding: 16px;
+                        font-size: i.$text-sub-size;
+                    }
+                }
+            }
+        }
+
+        .scroll-message {
+            margin: 8px;
+        }
+
+    }
+
+}
+

@@ -1,0 +1,26 @@
+@use "../base/b-index" as i;
+
+.top-message {
+    padding: 48px;
+    font-size: i.$text-max-size;
+    text-align: center;
+    color: i.$white;
+    -webkit-text-stroke: 0.4px i.$black;
+    font-weight: bold;
+
+    @include i.tab {
+        font-size: i.$text-middle-size;
+    }
+
+    @include i.sp {
+        padding: 32px 16px;
+        line-height: 1.8;
+        font-size: i.$text-min-size;
+    }
+
+    @include i.mb {
+        padding-bottom: 16px;
+        font-size: 0.6rem;
+    }
+}
+

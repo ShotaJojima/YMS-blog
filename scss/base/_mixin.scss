@@ -1,0 +1,40 @@
+@mixin center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin block-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// スマートフォン用スタイル
+@mixin mb {
+    @media (max-width: 425px) {
+      @content;
+    }
+  }
+
+@mixin sp {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  
+  // タブレット用スタイル
+  @mixin tab {
+    @media  (max-width: 1080px) {
+      @content;
+    }
+  }
+  
+  // デスクトップ用スタイル
+  @mixin pc {
+    @media (min-width: 1080px) {
+      @content;
+    }
+  }
+  

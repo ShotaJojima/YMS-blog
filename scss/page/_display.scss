@@ -1,0 +1,71 @@
+@use "../base/b-index" as i;
+
+.display_block {
+
+    .display_title-box {
+        width: 100vw;
+        background-color: i.$blue;
+        // ↓ l_mainのpadding分ずらしている
+        transform: translate(-36px);
+        margin: 16px 0;
+        padding: 16px 36px;
+        
+        .display_title {
+            font-size: i.$text-max-size;
+            font-weight: bold;
+            color: i.$white;
+
+            @include i.sp {
+                font-size: i.$title-min-size;
+            }
+        }
+    }
+
+    .display_button {
+        display: block;
+        margin: 24px auto;
+
+    }
+
+    .display_category-group {
+        .display_category-box {
+            margin: 24px 0;
+            
+            .display_category_title {
+                display: inline-block;
+                padding: 8px 2px;
+                background-color: i.$deep-light-blue;
+                font-size: i.$title-min-size;
+                font-weight: bold;
+
+                @include i.sp {
+                    font-size: i.$text-sub-size;
+
+                }
+            }
+        }
+
+        .display_category-box:not(:nth-child(2)) {
+            margin-top: 48px;
+        }
+    }
+
+    .display_archive-group {
+        .display_archive-box {
+            margin: 24px 0;
+            .display_archive_title {
+                display: inline-block;
+                padding: 8px 2px 0 2px;
+                font-size: i.$title-min-size;
+                font-weight: bold;
+                border-bottom: 1px solid #000;
+            }
+        }
+
+        .display_archive-box:not(:nth-child(2)) {
+            margin-top: 48px;
+        }
+    }
+}
+
+
