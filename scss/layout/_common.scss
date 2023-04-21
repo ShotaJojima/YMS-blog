@@ -306,6 +306,7 @@ body {
             margin-top: 16px;
             .m_category {
                 background-color: i.$deep-light-blue;
+                font-weight: bold;
             }
             .m_post_date {
                 font-weight: bold;
@@ -329,9 +330,23 @@ body {
         }
     }
 
+    
+
     @include i.sp {
         flex-direction: column
     }
+}
+
+.m_single-post {
+    .m_single_text-box {
+        width: auto;
+
+        .m_single_title {
+            font-size: i.$title-middle-size;
+        }
+
+    }
+    
 }
 
 

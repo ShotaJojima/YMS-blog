@@ -12,28 +12,20 @@
             <div class="l_main-page_inner">
                 <!-- <div class="advertisement"></div> -->
 
-                <h2 class="m_main-page_title">　新着記事</h2>
                 <div class="l_main-page_contents ">
                     <div class="new-post_block l_main_block">
                         <?php if (have_posts()) : while(have_posts()) :the_post(); ?>
 
-                        <article class="m_post">        
-                            <div class="m_post_text-box">
-                                <h3 class="m_post_title"><?php the_title(); ?></h3>
-                                <div class="m_post_img-box">
-                                    <img 
-                                        src="<?php echo esc_url( get_template_directory_uri() . '/img/bg.jpg' ); ?>" 
-                                        alt="" 
-                                        class="m_post_img"
-                                    >
-                                </div>
-                                <?php the_content(); ?>
-                                <p class="m_post_main-text"><?php the_content(); ?></p>
+                        <article class="m_post m_single-post">        
+                            <div class="m_post_text-box m_single_text-box">
+                                <h3 class="m_post_title m_single_title"><?php the_title(); ?></h3>
                                 <div class="m_small-contents">
                                     <span class="m_category"><?php the_category(',');?></span>
                                     <time class="m_post_date"><?php echo get_the_date('Y.m.d') ?></time>
                                 </div>
                                 
+                                <p class="m_post_main-text"><?php the_content(); ?></p>
+                                                                
                             </div>
                             
                         </article>

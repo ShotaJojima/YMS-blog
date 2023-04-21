@@ -302,6 +302,7 @@ body {
 }
 .m_post .m_post_text-box .m_small-contents .m_category {
   background-color: #88FFF8;
+  font-weight: bold;
 }
 .m_post .m_post_text-box .m_small-contents .m_post_date {
   font-weight: bold;
@@ -325,6 +326,13 @@ body {
   .m_post {
     flex-direction: column;
   }
+}
+
+.m_single-post .m_single_text-box {
+  width: auto;
+}
+.m_single-post .m_single_text-box .m_single_title {
+  font-size: 1.5rem;
 }
 
 .m_pagenation {
