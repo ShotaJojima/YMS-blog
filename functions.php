@@ -41,19 +41,6 @@
         );
 
     }
-// ウィジェットの追加
-function sample_widgets(){
-    register_sidebar(array(
-    'name' => 'サイドバー',
-    'description' => 'サイドバーウィジェット',
-    'id' => 'sidebar',
-    'before_widget' => '<div>',
-    'after_widget' => '</div>',
-    'before_title' => '<h3>',
-    'after_title' => '</h3>'
-    ));
-    }
-    add_action('widgets_init', 'sample_widgets');
 
 
     add_filter('script_loader_tag', 'add_defer', 10, 2);

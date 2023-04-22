@@ -69,9 +69,22 @@
     <aside class="l_aside-box m_aside_archive">
         <h4 class="m_aside_title">　アーカイブ</h4>
         <ul class="m_aside_list m_aside_archive-list">
-            <li class="m_aside_category_"><?php echo get_archives_link( '', 'Monthly Archives:' ); ?></li>
-            <li class="m_aside_category_">2023/2</li>
-            <li class="m_aside_category_">2023/1</li>
+        <?php
+            $args = array(
+                'type'            => 'monthly',
+                'limit'           => '',
+                'format'          => 'html', 
+                'before'          => '',
+                'after'           => '',
+                'show_post_count' => false,
+                'echo'            => 1,
+                'order'           => 'DESC',
+                'post_type'     => 'post'
+            );
+            
+            wp_get_archives( $args );
+            ?>
+
         </ul>
     </aside>
                         
