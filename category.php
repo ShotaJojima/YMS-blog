@@ -54,11 +54,7 @@
                                     <?php wp_reset_postdata(); ?>
                                     <?php endif; ?>
 
-                                    <?php
-                                        if ( pagination() ) {
-                                        echo pagination();
-                                        }
-                                    ?>
+                                    
 
                                 </div>
 

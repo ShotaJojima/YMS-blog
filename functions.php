@@ -62,34 +62,4 @@
     
 
 
-    // ページネーションの設定
-        function pagination() {
-            global $wp_query;
-            $page_format = paginate_links(
-              array(
-                'current' => max(1, get_query_var('paged')),
-                'total' => $wp_query->max_num_pages,
-                'type'  => 'array',
-                'prev_text' => '前へ',//前へのリンク文言
-                'next_text' => '次へ',//次へのリンク文言
-                'end_size' => 1,//初期値：１  両端のﾍﾟｰｼﾞﾘﾝｸの数
-                'mid_size' => 2,//初期値：２  現在のﾍﾟｰｼﾞの両端にいくつページリンクを表示するか（現在のページは含まない）
-                'prev_next' => true,//初期値：true  リストの中に「前へ」「次へ」のリンクを含むか
-              )
-            );
-            $code = '';
-            if( is_array($page_format) ) {
-              $paged = get_query_var('paged') == 0 ? 1 : get_query_var('paged');
-              $code .= '<div class="pagination">'.PHP_EOL;
-              $code .= '<ul>'.PHP_EOL;
-              foreach ( $page_format as $page ) {
-                $code .= '<li>'.$page.'</li>'.PHP_EOL;
-              }
-              $code .= '</ul>'.PHP_EOL;
-              $code .= '</div>'.PHP_EOL;
-              $code .= '<div class="pagination-total">'.$paged.'/'.$wp_query->max_num_pages.'</div>'.PHP_EOL;
-            }
-            wp_reset_query();
-            return $code;
-          }
 ?>
