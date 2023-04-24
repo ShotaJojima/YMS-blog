@@ -12,14 +12,14 @@
             <div class="l_main-page_inner">
                 <!-- <div class="advertisement"></div> -->
 
-                <h2 class="m_main-page_title">　記事一覧</h2>
+                <h2 class="m_main-page_title">　カテゴリー</h2>
                 <div class="l_main-page_contents">
                     <div class="display_block l_main_block">
                         <?php if (in_category('yms')) : ?>
 
                             <div class="display_category-group">
                                 <div class="display_title-box">
-                                    <h3 class="display_title">YMS</h3>
+                                    <h3 class="display_title"><?php get_the_category(  );?></h3>
                                 </div>
                                 <div class="display_category-box">
                                     <div class="display_category_article-box">
@@ -127,7 +127,7 @@
 
                             </div>
 
-                        <!-- その他のカテゴリーに属する投稿を表示するコードを記述 -->
+                            <?php elseif (in_category('outdoor')): ?>
 
                         <?php endif; ?>                        
                         
