@@ -349,32 +349,38 @@ body {
     
 }
 
-
-.m_pagenation {
+// WPページネーション↓
+.page-numbers {
     @include i.center;
     gap: 16px;
 
-    .m_pagenation_link {
+    .page-numbers {
         width: 4vw;
         height: 4vw;
         background-color: i.$blue;
         position: relative;
+        color: i.$white;
+        font-size: i.$text-middle-size;
+        font-weight: bold;
+        text-align: center;
+       
+        box-shadow: 2px 4px 4px gray;;
 
         @include i.mb {
             width: 8vw;
             height: 8vw;
         }
+    }
 
-        .m_pagenation_text {
-            text-align: center;
-            color: i.$white;
-            font-weight: bold;
-            @include i.block-center;
-
-        }
+    .current {
+        background-color: i.$white;
+        color: i.$blue;
+        border: 1px solid i.$black;
     }
 
 }
+// WPページネーション↑
+
 
 .m_aside_title {
     font-size: i.$title-min-size;

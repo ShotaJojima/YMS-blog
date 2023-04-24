@@ -44,24 +44,16 @@
                         <?php endwhile; endif; ?>
 
                         <div class="m_pagenation">
-                            <a href="" class="m_pagenation_link">
-                                <p class="m_pagenation_text"><</p>
-                            </a>
-                            <a href="" class="m_pagenation_link">
-                                <p class="m_pagenation_text">1</p>
-                            </a>
-                            <a href="" class="m_pagenation_link">
-                                <p class="m_pagenation_text">2</p>
-                            </a>
-                            <a href="" class="m_pagenation_link">
-                                <p class="m_pagenation_text">3</p>
-                            </a>
-                            <a href="" class="m_pagenation_link">
-                                <p class="m_pagenation_text">...</p>
-                            </a>
-                            <a href="" class="m_pagenation_link">
-                                <p class="m_pagenation_text">></p>
-                            </a>
+                            <?php the_posts_pagination(
+                                array(
+                                    'mid_size'      => 5, // 現在ページの左右に表示するページ番号の数
+                                    'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
+                                    'prev_text'     => __( '前へ'), // 「前へ」リンクのテキスト
+                                    'next_text'     => __( '次へ'), // 「次へ」リンクのテキスト
+                                    'type'          => 'list', // 戻り値の指定 (plain/list)
+                                )
+                            ); ?>
+                            
                         </div>
                     </div>
 
